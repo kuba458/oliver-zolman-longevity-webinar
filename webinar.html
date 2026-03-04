@@ -48,6 +48,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 
 /* GLOBAL TYPOGRAPHIC TOKENS */
 .stag{font-family:var(--font-mono);font-size:16px;letter-spacing:0.14em;text-transform:uppercase;font-weight:500}
+.level-icon{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:8px;background:rgba(26,36,86,0.08);margin-right:10px;font-size:15px;vertical-align:middle;letter-spacing:0;text-transform:none;flex-shrink:0}
 .stag-l{color:rgba(255,255,255,0.3)}
 .stag-d{color:var(--text-muted)}
 .sh{font-family:var(--font-serif);font-size:clamp(46px,6vw,78px);line-height:1.08;font-weight:400;letter-spacing:-0.01em}
@@ -71,21 +72,22 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 
 /* ABOUT OLIVER SLIDE */
 .s-about-oliver{align-items:flex-start!important}
-.about-oliver{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:start;margin-top:16px}
-.about-oliver-left{display:flex;flex-direction:column;gap:14px}
-.about-oliver-header{display:flex;align-items:center;gap:20px}
-.about-oliver-photo{width:100px;height:100px;border-radius:16px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,0.1);flex-shrink:0}
-.about-oliver-bio{font-size:18px;color:var(--text-secondary);line-height:1.6}
-.about-oliver-media{display:flex;flex-wrap:wrap;gap:6px;margin-top:4px}
-.media-pill{padding:5px 12px;border-radius:var(--radius-pill);font-family:var(--font-mono);font-size:12px;letter-spacing:0.03em;background:rgba(26,36,86,0.06);color:var(--accent-navy)}
-.about-oliver-right{display:flex;flex-direction:column;gap:12px}
-.about-cambridge{display:flex;align-items:center;gap:14px;padding:16px 20px;background:#fff;border:1px solid var(--border-light);border-radius:16px}
-.about-cambridge img{height:40px;object-fit:contain}
-.about-cambridge-text{font-size:16px;color:var(--text-secondary);line-height:1.4}
-.about-fortune{border-radius:16px;overflow:hidden;border:1px solid var(--border-light);box-shadow:0 4px 20px rgba(0,0,0,0.06);max-height:200px}
-.about-fortune img{width:100%;display:block;object-fit:cover;object-position:top}
-.about-netflix{padding:16px 20px;background:rgba(26,36,86,0.04);border-radius:16px;border-left:3px solid var(--accent-navy)}
-.about-netflix p{font-family:var(--font-serif);font-style:italic;font-size:19px;color:var(--accent-navy);line-height:1.45}
+.s-about-oliver .slide-inner{height:100%;display:flex;flex-direction:column}
+.about-oliver{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:start;margin-top:10px;flex:1;min-height:0}
+.about-oliver-left{display:flex;flex-direction:column;gap:10px}
+.about-oliver-header{display:flex;align-items:center;gap:16px}
+.about-oliver-photo{width:80px;height:80px;border-radius:14px;object-fit:cover;box-shadow:0 8px 30px rgba(0,0,0,0.1);flex-shrink:0}
+.about-oliver-bio{font-size:16px;color:var(--text-secondary);line-height:1.5}
+.about-oliver-media{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px}
+.media-pill{padding:4px 10px;border-radius:var(--radius-pill);font-family:var(--font-mono);font-size:11px;letter-spacing:0.03em;background:rgba(26,36,86,0.06);color:var(--accent-navy)}
+.about-netflix-inline{padding:12px 16px;background:rgba(26,36,86,0.04);border-radius:14px;border-left:3px solid var(--accent-navy);margin-top:8px}
+.about-netflix-inline p{font-family:var(--font-serif);font-style:italic;font-size:16px;color:var(--accent-navy);line-height:1.35}
+.about-oliver-right{display:flex;flex-direction:column;gap:10px}
+.about-cambridge{display:flex;align-items:center;gap:12px;padding:12px 16px;background:#fff;border:1px solid var(--border-light);border-radius:14px}
+.about-cambridge img{height:34px;object-fit:contain}
+.about-cambridge-text{font-size:14px;color:var(--text-secondary);line-height:1.35}
+.about-fortune{border-radius:14px;overflow:hidden;border:1px solid var(--border-light);box-shadow:0 4px 20px rgba(0,0,0,0.06);flex:1;min-height:0}
+.about-fortune img{width:100%;height:100%;display:block;object-fit:cover;object-position:top}
 
 /* ===== COVER ===== */
 .s-cover{background:var(--bg-cream);position:relative}
@@ -372,6 +374,9 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
         <span class="media-pill">Rolling Stone</span>
         <span class="media-pill">The Onion</span>
       </div>
+      <div class="about-netflix-inline anim d6">
+        <p>Featured in the 2025 Netflix documentary "Don't Die"</p>
+      </div>
     </div>
     <div class="about-oliver-right">
       <div class="about-cambridge anim d3">
@@ -380,9 +385,6 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
       </div>
       <div class="about-fortune anim d4">
         <img src="assets/Screenshot%202026-03-04%20at%2011.29.34%E2%80%AFPM.png" alt="Fortune Well feature">
-      </div>
-      <div class="about-netflix anim d5">
-        <p>Featured in the 2025 Netflix documentary "Don't Die"</p>
       </div>
     </div>
   </div>
@@ -546,7 +548,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 <!-- ==================== SLIDE 8: SLEEP ==================== -->
 <section class="slide s-fact" data-theme="dark">
 <div class="slide-inner">
-  <div class="stag stag-d anim d1">Level 1 &mdash; Sleep</div>
+  <div class="stag stag-d anim d1"><span class="level-icon">🌙</span>Level 1 &mdash; Sleep</div>
   <div class="fact-layout">
     <div>
       <div class="fact-stat anim d2">+8.7</div>
@@ -568,7 +570,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 <!-- ==================== SLIDE 9: EXERCISE ==================== -->
 <section class="slide s-fact alt" data-theme="dark">
 <div class="slide-inner">
-  <div class="stag stag-d anim d1">Level 1 &mdash; Exercise</div>
+  <div class="stag stag-d anim d1"><span class="level-icon">🏃</span>Level 1 &mdash; Exercise</div>
   <div class="fact-layout">
     <div>
       <div class="fact-stat gold anim d2">6+</div>
@@ -592,7 +594,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 <!-- ==================== SLIDE 10: DIET ==================== -->
 <section class="slide s-fact cream" data-theme="dark">
 <div class="slide-inner">
-  <div class="stag stag-d anim d1">Level 1 &mdash; Diet</div>
+  <div class="stag stag-d anim d1"><span class="level-icon">🥗</span>Level 1 &mdash; Diet</div>
   <div class="fact-layout">
     <div>
       <div class="fact-stat anim d2">+5</div>
@@ -611,7 +613,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 <!-- ==================== SLIDE 11: BLOOD PRESSURE ==================== -->
 <section class="slide s-fact" data-theme="dark">
 <div class="slide-inner">
-  <div class="stag stag-d anim d1">Level 1 &mdash; Blood Pressure</div>
+  <div class="stag stag-d anim d1"><span class="level-icon">❤️</span>Level 1 &mdash; Blood Pressure</div>
   <div class="fact-layout">
     <div>
       <div class="fact-stat anim d2">110/70</div>
@@ -635,7 +637,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 <!-- ==================== SLIDE 12: CRON MONKEY EVIDENCE ==================== -->
 <section class="slide s-fact alt" data-theme="dark">
 <div class="slide-inner">
-  <div class="stag stag-d anim d1">Level 1 &mdash; Caloric Restriction</div>
+  <div class="stag stag-d anim d1"><span class="level-icon">⚖️</span>Level 1 &mdash; Caloric Restriction</div>
   <div class="fact-layout">
     <div>
       <div class="fact-stat anim d2">41%</div>
@@ -672,7 +674,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 <!-- ==================== SLIDE 14: VITAMINS ==================== -->
 <section class="slide s-fact cream" data-theme="dark">
 <div class="slide-inner">
-  <div class="stag stag-d anim d1">Level 1 &mdash; Key Vitamins</div>
+  <div class="stag stag-d anim d1"><span class="level-icon">💊</span>Level 1 &mdash; Key Vitamins</div>
   <h2 class="sh anim d2" style="color:var(--text-primary);font-size:clamp(32px,4vw,48px)">3 Tests You Should Get Today</h2>
   <div class="vit-grid">
     <div class="vit-card anim d3">
@@ -697,7 +699,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 <!-- ==================== SLIDE 15: WAIST ==================== -->
 <section class="slide s-fact" data-theme="dark">
 <div class="slide-inner">
-  <div class="stag stag-d anim d1">Level 1 &mdash; Body Composition</div>
+  <div class="stag stag-d anim d1"><span class="level-icon">📏</span>Level 1 &mdash; Body Composition</div>
   <div class="fact-layout">
     <div>
       <div class="fact-stat anim d2">+2 yrs</div>
@@ -741,7 +743,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 <!-- ==================== SLIDE 16: AIR + ORAL ==================== -->
 <section class="slide s-fact alt" data-theme="dark">
 <div class="slide-inner">
-  <div class="stag stag-d anim d1">Level 1 &mdash; Often Overlooked</div>
+  <div class="stag stag-d anim d1"><span class="level-icon">🌬️</span>Level 1 &mdash; Often Overlooked</div>
   <h2 class="sh anim d2" style="color:var(--text-primary);font-size:clamp(32px,4vw,48px)">Air Quality &amp; Oral Health</h2>
   <div class="dual-grid">
     <div class="dual-card anim d3">
