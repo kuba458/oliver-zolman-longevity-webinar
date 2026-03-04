@@ -71,30 +71,27 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 .progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent-navy),var(--accent-blue),var(--accent-gold));z-index:200;transition:width 0.4s cubic-bezier(0.4,0,0.2,1)}
 
 /* ABOUT OLIVER SLIDE */
-.s-about-oliver{background:#f9f4f1!important;align-items:center!important;padding:16px 48px!important}
+.s-about-oliver{background:var(--bg-primary)!important;align-items:center!important;padding:16px 48px!important}
 .s-about-oliver .slide-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;max-width:1200px}
-.ao-left{display:flex;flex-direction:column;gap:18px}
-.ao-label{font-family:var(--font-mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--accent-amber);font-weight:600}
+.ao-left{display:flex;flex-direction:column;gap:16px}
 .ao-name{font-family:var(--font-serif);font-size:clamp(36px,5vw,54px);color:var(--text-primary);line-height:1.08;font-weight:400}
-.ao-creds{font-family:var(--font-mono);font-size:13px;letter-spacing:0.06em;color:var(--text-muted);margin-top:-4px}
+.ao-creds{font-family:var(--font-mono);font-size:13px;letter-spacing:0.06em;color:var(--text-muted);margin-top:-6px}
 .ao-creds strong{color:var(--accent-navy);font-weight:600}
-.ao-bio{font-size:16px;color:var(--text-secondary);line-height:1.6;margin-top:4px}
-.ao-cambridge{display:flex;align-items:center;gap:12px;margin-top:6px}
+.ao-bio{font-family:var(--font-sans);font-size:17px;color:var(--text-secondary);line-height:1.6}
+.ao-cambridge{display:flex;align-items:center;gap:12px}
 .ao-cambridge img{height:30px;object-fit:contain}
-.ao-cambridge-text{font-size:13px;color:var(--text-muted);line-height:1.3}
-.ao-netflix{display:inline-flex;align-items:center;gap:8px;padding:8px 14px;background:rgba(255,182,133,0.12);border-radius:10px;margin-top:4px}
-.ao-netflix-dot{width:8px;height:8px;border-radius:50%;background:#ffb685;flex-shrink:0}
-.ao-netflix p{font-size:13px;color:var(--text-secondary);line-height:1.35;margin:0}
-.ao-netflix p strong{color:var(--text-primary);font-weight:600}
+.ao-cambridge-text{font-family:var(--font-sans);font-size:13px;color:var(--text-muted);line-height:1.3}
+.ao-netflix{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;background:rgba(26,36,86,0.04);border-radius:var(--radius-card);border-left:3px solid var(--accent-navy)}
+.ao-netflix p{font-family:var(--font-serif);font-style:italic;font-size:17px;color:var(--accent-navy);line-height:1.35;margin:0}
 .ao-right{display:flex;flex-direction:column;gap:24px}
-.ao-fortune{padding:24px 28px;background:#fff;border-radius:16px;border-left:3px solid #ffb685;box-shadow:0 2px 16px rgba(0,0,0,0.04)}
-.ao-fortune-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-faint);margin-bottom:10px}
+.ao-fortune{padding:24px 28px;background:#fff;border:1px solid var(--border-light);border-radius:var(--radius-card);box-shadow:0 2px 16px rgba(0,0,0,0.04)}
+.ao-fortune-label{font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-faint);margin-bottom:10px}
 .ao-fortune-quote{font-family:var(--font-serif);font-size:22px;color:var(--text-primary);line-height:1.35;font-weight:400;font-style:italic}
-.ao-fortune-attr{font-family:var(--font-mono);font-size:11px;color:var(--text-faint);margin-top:12px;letter-spacing:0.04em}
+.ao-fortune-attr{font-family:var(--font-mono);font-size:12px;color:var(--text-faint);margin-top:12px;letter-spacing:0.04em}
 .ao-press{display:flex;flex-wrap:wrap;align-items:center;gap:24px;padding-top:4px}
 .ao-press img{height:24px;object-fit:contain;opacity:0.35;filter:grayscale(100%);transition:opacity 0.3s}
-.ao-press img:hover{opacity:0.7}
-.ao-press-label{font-family:var(--font-mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-faint);width:100%;margin-bottom:4px}
+.ao-press img:hover{opacity:0.6}
+.ao-press-label{font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-faint);width:100%;margin-bottom:4px}
 
 /* ===== COVER ===== */
 .s-cover{background:var(--bg-cream);position:relative}
@@ -359,7 +356,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 <section class="slide s-about-oliver" data-theme="dark">
 <div class="slide-inner">
   <div class="ao-left">
-    <div class="ao-label anim d1">Your presenter</div>
+    <div class="stag stag-d anim d1">Your presenter</div>
     <h2 class="ao-name anim d2">Dr Oliver Zolman</h2>
     <div class="ao-creds anim d3">MBBS BSc &nbsp;&bull;&nbsp; <strong>Medical Director &mdash; Mos Health</strong></div>
     <p class="ao-bio anim d4">Cambridge-trained medical doctor and the world's leading evidence-based longevity physician. Creator of the Zolman 81 Organ Biological Age framework with 500+ biological clocks.</p>
@@ -368,8 +365,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
       <div class="ao-cambridge-text">University of Cambridge<br>Medical Sciences</div>
     </div>
     <div class="ao-netflix anim d6">
-      <span class="ao-netflix-dot"></span>
-      <p>Featured in the 2025 Netflix documentary <strong>&ldquo;Don't Die&rdquo;</strong></p>
+      <p>Featured in the 2025 Netflix documentary &ldquo;Don't Die&rdquo;</p>
     </div>
   </div>
   <div class="ao-right">
