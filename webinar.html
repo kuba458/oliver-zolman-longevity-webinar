@@ -36,7 +36,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 
 /* SLIDE SYSTEM */
 .slides-wrapper{height:100vh;width:100vw;position:relative;overflow:hidden}
-.slide{position:absolute!important;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:64px 48px 44px;opacity:0;pointer-events:none;transition:opacity 0.45s cubic-bezier(0.4,0,0.2,1),transform 0.45s cubic-bezier(0.4,0,0.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;cursor:pointer}
+.slide{position:absolute!important;inset:0;width:100%;height:100%;display:flex;align-items:center;justify-content:center;padding:44px 48px;opacity:0;pointer-events:none;transition:opacity 0.45s cubic-bezier(0.4,0,0.2,1),transform 0.45s cubic-bezier(0.4,0,0.2,1);overflow-y:auto;-webkit-overflow-scrolling:touch;cursor:pointer}
 .slide.active{opacity:1;pointer-events:auto;z-index:2}
 .slide-inner{max-width:1200px;width:100%;margin:0 auto}
 
@@ -67,7 +67,7 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 .nav-dots.light .nav-dot.active{background:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.7)}
 
 /* PROGRESS BAR */
-.progress-bar{position:fixed;top:48px;left:0;height:3px;background:linear-gradient(90deg,var(--accent-navy),var(--accent-blue),var(--accent-gold));z-index:200;transition:width 0.4s cubic-bezier(0.4,0,0.2,1)}
+.progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--accent-navy),var(--accent-blue),var(--accent-gold));z-index:200;transition:width 0.4s cubic-bezier(0.4,0,0.2,1)}
 
 /* ABOUT OLIVER SLIDE */
 .s-about-oliver{align-items:flex-start!important}
@@ -101,12 +101,6 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 .cover-logos img{height:32px;object-fit:contain;opacity:0.5}
 .cover-logos img.mos-logo{height:28px}
 
-/* TFH BRANDING BAR */
-.tfh-bar{position:fixed;top:0;left:0;right:0;height:48px;background:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 32px;z-index:150;border-bottom:1px solid var(--border-light)}
-.tfh-bar img{height:22px;object-fit:contain}
-.tfh-bar .tfh-label{font-family:var(--font-mono);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-muted)}
-.tfh-bar.on-dark{background:rgba(13,18,41,0.95);border-bottom-color:rgba(255,255,255,0.08)}
-.tfh-bar.on-dark .tfh-label{color:rgba(240,237,231,0.35)}
 
 /* ===== STAT HERO ===== */
 .s-stat{background:var(--bg-dark);color:var(--text-on-dark)}
@@ -329,10 +323,6 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
 </head>
 <body>
 
-<div class="tfh-bar" id="tfhBar">
-  <img src="assets/clients/Tools_for_Humanity_06.2025.svg" alt="Tools for Humanity">
-  <span class="tfh-label">Wellness Webinar</span>
-</div>
 <div class="progress-bar" id="progressBar"></div>
 <div class="slide-counter dark" id="slideCounter">01 / 27</div>
 <div class="click-hint dark" id="clickHint">click or use arrow keys</div>
@@ -992,7 +982,6 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
   const hint = document.getElementById('clickHint');
   const dotsNav = document.getElementById('navDots');
   const progressBar = document.getElementById('progressBar');
-  const tfhBar = document.getElementById('tfhBar');
   let current = 0;
 
   // Build dots
@@ -1019,7 +1008,6 @@ html,body{height:100%;overflow:hidden;font-family:var(--font-sans);-webkit-font-
     counter.className = 'slide-counter '+(theme==='light'?'light':'dark');
     hint.className = 'click-hint '+(theme==='light'?'light':'dark');
     dotsNav.className = 'nav-dots '+(theme==='light'?'light':'dark');
-    tfhBar.className = 'tfh-bar'+(theme==='light'?' on-dark':'');
     counter.textContent = String(current+1).padStart(2,'0')+' / '+String(total).padStart(2,'0');
     progressBar.style.width = ((current+1)/total*100)+'%';
   }
